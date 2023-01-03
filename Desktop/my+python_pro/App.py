@@ -1,4 +1,10 @@
-import flask
-import numpy as np
-import requests
-print ('code completed')
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Index page"
+
+if __name__=="__main__":
+    app.run(debug=True)
